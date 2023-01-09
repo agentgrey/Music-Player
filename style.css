@@ -1,0 +1,335 @@
+/* Variables */
+body{
+     background-image: url("assets/main.jpg");
+     /* background-image: url("assets/navbar.jpg"); */
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/* Class */
+
+/* Heading */
+.header {
+    position: sticky;
+    top:0;
+    z-index: 1;
+}
+.top-nav {
+    background-color: #161616;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    position: fixed;
+}
+/* left heading*/
+.left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.brand {
+    color:rgb(206, 7, 7);
+    font-size: 30px;
+    font-weight: bolder;
+    text-decoration: none;
+    width: 210px;
+    padding-left: 5%;
+    margin-top: 10px;
+}
+.fav {
+    color:rgb(206, 7, 7);
+    font-size: 18px;
+    margin-left: 30px;
+    padding-top: 20px;
+}
+/* Right heading */
+.right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.search-box{
+    color:rgb(206, 7, 7);
+    margin: 20px;
+}
+.search{
+    width: 80%;
+    border-radius: 25px;
+    padding: 5px 10px;
+}
+.user{
+    justify-content: flex-end;
+    padding: 10px;
+}
+.profile-pic{
+    border-radius: 50%;
+}
+
+
+/* Middle Content */
+.body{
+    width: 100%;
+    height:100%;
+    padding-top: 70px;
+    display: flex;
+    z-index: 3;
+    /* margin-bottom: 100px; */
+}
+.content {
+	display: inline-block;
+    height: 100vh;
+} 
+/* Main */
+.main{
+    flex:10;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.main::-webkit-scrollbar{
+    display: none;
+}
+.carousel {
+    position: center;
+    margin-top: 15px;
+    margin-left: 20%;
+}
+#slider {
+    width: 45%;
+    min-width: 200px;
+    height: 40vh;
+    perspective: 1200px;
+    transform-style: preserve-3d;
+}
+#slider label, #slider label img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: transform 400ms ease;
+}
+input[type=radio] {
+    display: none;
+}
+/* Carousel */
+#s1:checked ~ #slide1,
+#s2:checked ~ #slide2,
+#s3:checked ~ #slide3,
+#s4:checked ~ #slide4,
+#s5:checked ~ #slide5, 
+#s6:checked ~ #slide6{
+   box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
+   transform: translate3d(0%, 0, 0px);
+ } 
+#s1:checked ~ #slide2,
+#s2:checked ~ #slide3,
+#s3:checked ~ #slide4,
+#s4:checked ~ #slide5,
+#s5:checked ~ #slide6,
+#s6:checked ~ #slide1 {
+   box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+   transform: translate3d(20%, 0, -50px);
+ }
+#s1:checked ~ #slide3,
+#s2:checked ~ #slide4,
+#s3:checked ~ #slide5,
+#s4:checked ~ #slide6,
+#s5:checked ~ #slide1,
+#s6:checked ~ #slide2 {
+   box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+   transform: translate3d(40%, 0, -200px);
+ }
+#s1:checked ~ #slide4,
+#s2:checked ~ #slide5,
+#s3:checked ~ #slide6,
+#s4:checked ~ #slide1,
+#s5:checked ~ #slide2
+#s6:checked ~ #slide3 {
+   box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+   transform: translate3d(60%, 0, -350px);
+ }
+#s1:checked ~ #slide5,
+#s2:checked ~ #slide6,
+#s3:checked ~ #slide1,
+#s4:checked ~ #slide2,
+#s5:checked ~ #slide3,
+#s6:checked ~ #slide4 {
+   box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+   transform: translate3d(-40%, 0, -200px);
+ }
+#s1:checked ~ #slide6,
+#s2:checked ~ #slide1,
+#s3:checked ~ #slide2,
+#s4:checked ~ #slide3,
+#s5:checked ~ #slide4,
+#s6:checked ~ #slide5 {
+   box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+   transform: translate3d(-20%, 0, -50px);
+ }
+
+/* Side */
+.side {
+    background-color: #16161671;
+    flex: 5;
+    overflow: scroll;
+}
+.side::-webkit-scrollbar{
+    display: none;
+}
+.side-nav {
+    background-color: #161616;
+    color: rgb(206, 7, 7);
+    width: 34%;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+}
+.side-left{
+    font-size: 50px;
+    font-weight: 500;
+    margin-left: 10px;
+    justify-content: flex-start;    
+}
+.side-right{
+    font-size: 20px;
+    justify-content: flex-end;
+    padding-top: 20px;
+    padding-right: 10px;
+}
+.song-row {
+    /* display: flex; */
+    flex-direction: row;
+    margin-top: 12vh;
+    margin-bottom: 170px;
+}
+.song {
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    padding-bottom: 10px;
+}
+.side-song {
+    display: flex;
+    justify-content: flex-start;
+}
+.side-poster {
+    width: 60px;
+    height: 70px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.side-song-name{
+    color: cornsilk;
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 18px;
+}
+.side-artist-name {
+    color: grey;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 0;
+}
+.side-more {
+    color: #f02424;
+    margin-top: 15px;
+    justify-content: flex-end;
+}
+.side-more-option {
+    font-size: 18px;
+    padding-right: 10px;
+}
+
+
+
+
+
+/* Player */
+.player-nav {
+    background-color: #161616;
+    /* background-image: url("assets/footer.jpg"); */
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    position: fixed;
+    bottom: 0;
+    color:rgb(206, 7, 7);
+}
+.song-info {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 15px;
+}
+.song-details {
+    padding-left: 20px;
+}
+.song-pic {
+    border-style: outset;
+    border-color: rgb(206, 7, 7);
+    border-width: 2px;
+}
+.like {
+    font-size: 18px;
+    padding-top: 7px;
+    margin-left: 20px;
+}
+.player {
+    justify-content: center;
+    margin: 2%;
+    color: rgb(206, 7, 7);
+}
+.more {
+    display: flex;
+    justify-content: space-between;
+    margin: 2%;
+    padding: 10px;
+}
+.more-option {
+    font-size: 20px;
+    margin-top: 10px;
+    padding-left: 15px;
+}
+.slider {
+    height: 3px;   
+    outline: none;
+    margin-top: 18px;
+    margin-left: 5px;
+    width: 50%;
+    filter: saturate(0%);
+}
+
+
+
+/* Hover */
+.pic-glow:hover{
+    box-shadow: 0 0 7px #f02424;
+    cursor: pointer;
+}
+.glow:hover{
+    text-shadow: 0 0 3px #f02424;
+    cursor: pointer;
+}
+.song:hover {
+    background-color: #16161683;
+}
+.side-artist-name:hover {
+    text-decoration: underline;
+    text-underline-position: below;
+    cursor: pointer;
+}
+.side-poster:hover {
+    cursor:pointer;
+    border-style: outset;
+    border-color: transparent;
+    border-width: 0.5px;
+}
+    
