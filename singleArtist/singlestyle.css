@@ -37,7 +37,7 @@ body{
     align-items: center;
 }
 .brand {
-    color:rgb(206, 7, 7);
+    color: var(--red);
     font-size: 40px;
     font-weight: bolder;
     text-decoration: none;
@@ -47,7 +47,7 @@ body{
 }
 .fav {
     display: flex;
-    color:rgb(206, 7, 7);
+    color: var(--red);
     font-size: 18px;
     margin-left: 30px;
     padding-top: 20px;
@@ -62,7 +62,7 @@ body{
     align-items: center;
 }
 .search-box{
-    color:rgb(206, 7, 7);
+    color: var(--red);
     margin: 20px;
 }
 .search{
@@ -95,13 +95,115 @@ body{
 /* Main */
 .main{
     flex:10;
-    height: 100%;
+    height: 90vh;
     overflow: scroll;
     overflow-x: hidden;
+    margin-left: 70px;
+    padding-top: 30px;
+    margin-right: 50px;
 }
 .main::-webkit-scrollbar{
     display: none;
 }
+
+.main-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black);
+    height: 300px;
+    /* visibility: hidden; */
+}
+.main-box div img{
+    height: 300px;
+    width: 330px;
+}
+.bandDes {
+    padding: 15px;
+    color: silver;
+}
+.playButton{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+.playButton button{
+    width: 130px;
+    height: 40px;
+    background-image: linear-gradient(60deg, rgb(99, 11, 11), rgb(151, 21, 21));
+    cursor: pointer;
+}
+.playButton p {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--red);
+}
+.numbers{
+    margin-top: 5px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: var(--red);
+}
+/* This is the card part that will store the 
+song in the playlist */
+.songList{
+    margin-top: 4%;
+}
+.list-item{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--black);
+    color: silver;
+}
+.firstPart{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.secondPart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.songNameAndImg{
+    display: flex;
+    flex-direction: row;
+}
+.faltu{
+    width: 100%;
+    height: 10px;
+}
+.songNameAndImg img{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    margin : 5px 25px;
+}
+.songNameAndImg h5 {
+    position: relative;
+    top:15%;
+    padding-bottom: 5px;
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+.icons div:nth-child(1){
+    margin: 0px 20px;
+}
+.icons div:nth-child(2){
+    margin: 0px 20px;
+}
+
 
 /* Side */
 .side {
@@ -109,10 +211,10 @@ body{
     flex-direction: column;
     overflow: scroll;
     overflow-x: hidden;
-    background-color: #16161671;
-    flex:4;
+    /* background-color: #35343471; */
+    flex:5;
     height: 90vh;
-    /* padding: 12px; */
+    padding: 12px;
     color: cornsilk;
 }
 .side::-webkit-scrollbar{
@@ -133,14 +235,41 @@ body{
     margin: 10px;
 }
 .similar-artists-left img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }
 .similar-artists-left p {
-    font-size: 22px;
+    margin-top: 30px;
+    font-size: 18px;
     color: cornsilk;
 }
 .similar-artists-item i {
+    font-size: 18px;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+.recently-played-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.recently-played-left {
+    display: flex;
+    column-gap: 20px;
+    margin: 10px;
+}
+.recently-played-left img {
+    width: 80px;
+    height: 80px;
+}
+.recently-played-left p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: cornsilk;
+}
+.recently-played-item i {
     font-size: 18px;
     justify-content: flex-end;
     margin-top: 10px;
@@ -151,6 +280,10 @@ body{
 
 
 /* Hover */
+.ul:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
 .pic-glow:hover{
     box-shadow: 0 0 7px var(--shadow);
     cursor: pointer;
@@ -168,4 +301,29 @@ body{
     border-style: outset;
     border-color: transparent;
     border-width: 1px;
+}
+.similar-artists-item p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.recently-played-item:hover {
+    background-color: #16161683;
+    transition-duration: 0.7s;
+}
+.recently-played-item img:hover {
+    cursor:pointer;
+    border-style: outset;
+    border-color: transparent;
+    border-width: 1px;
+}
+.recently-played-item p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.list-item:hover {
+    background-color: transparent;
+}
+.playButton button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
 }
