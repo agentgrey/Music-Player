@@ -62,10 +62,14 @@ body{
     margin-top: 10px;
 }
 .fav {
+    display: flex;
     color:rgb(206, 7, 7);
     font-size: 18px;
     margin-left: 30px;
     padding-top: 20px;
+}
+.fav-logo {
+    padding-top: 5px;
 }
 /* Right heading */
 .right {
@@ -268,6 +272,58 @@ input[type=radio] {
     padding-right: 5px;
     color: antiquewhite;
 }
+.release-item-option {
+    position: relative;
+}
+.release-option-popup {
+    display: none;
+    position: absolute;
+    top: 25px;
+    right: 0;
+    background: #161616;
+    color: antiquewhite;
+    font-size: 15px;
+    width: 180px;
+    border-radius: 4px;
+}
+.release-option-popup-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.release-option-popup-item {
+    display: flex;
+    justify-content: flex-start;
+}
+input[type="checkbox"] {
+  display: none;
+}
+#release-option-1[type="checkbox"]:checked ~ #release-popup-card-1 {
+  display: block;
+  z-index: 2;
+}
+#release-option-2[type="checkbox"]:checked ~ #release-popup-card-2 {
+  display: block;
+  z-index: 1;
+}
+#release-option-3[type="checkbox"]:checked ~ #release-popup-card-3 {
+  display: block;
+  z-index: 1;
+}
+#release-option-4[type="checkbox"]:checked ~ #release-popup-card-4 {
+  display: block;
+  z-index: 1;
+}
+#release-option-5[type="checkbox"]:checked ~ #release-popup-card-5 {
+  display: block;
+  z-index: 1;
+}
+#release-option-6[type="checkbox"]:checked ~ #release-popup-card-6 {
+  display: block;
+  z-index: 1;
+}
 /* Artist */
 .artists-content {
     display: flex;
@@ -313,12 +369,12 @@ input[type=radio] {
     overflow: hidden;
 }
 .genre-pic{
-    width: 260px;
-    height: 170px;
+    width: 20vw;
+    height: 14vw;
     overflow:hidden;
 }
 .genre-name {
-    font-size: 20px;
+    font-size: 2vw;
     color: antiquewhite;
     position: absolute;
     top: 50%;
@@ -361,6 +417,7 @@ input[type=radio] {
     padding-top: 20px;
     padding-right: 10px;
 }
+
 .song {
     display: flex;
     justify-content: space-between;
@@ -510,5 +567,21 @@ input[type=radio] {
 }
 .genre-item:hover p{
     text-shadow: 0 0 5px #ffffff;
+}
+
+/* Media Query */
+@media only screen and (max-width: 800px) {
+  .side {
+      display: none;
+  }
+  .fav p{
+      display: none;
+  }
+  .fav i{
+      padding-bottom:20px;
+  }
+  .player {
+      display: none;
+  }
 }
     
