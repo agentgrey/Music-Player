@@ -359,7 +359,7 @@ input[type="checkbox"] {
 .genre-content {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -570,18 +570,21 @@ input[type="checkbox"] {
 }
 
 /* Media Query */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   .side {
       display: none;
   }
-  .fav p{
-      display: none;
-  }
-  .fav i{
-      padding-bottom:20px;
-  }
-  .player {
-      display: none;
-  }
+}
+
+@media only screen and (max-width: 800px) {
+    .fav p{
+        display: none;
+    }
+    .fav i{
+        padding-bottom:20px;
+    }
+    .player {
+        display: none;
+    }
 }
     

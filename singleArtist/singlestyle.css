@@ -2,7 +2,7 @@
 :root {
     --black : #161616;
     --red: rgb(206, 7, 7);
-    --shadow: var(--red);
+    --shadow: #f02424;
 }
 body{
      background-image: url("/assets/main.jpg");
@@ -95,7 +95,7 @@ body{
 /* Main */
 .main{
     flex:10;
-    height: 90vh;
+    height: 72vh;
     overflow: scroll;
     overflow-x: hidden;
     margin-left: 70px;
@@ -107,6 +107,7 @@ body{
 }
 
 .main-box{
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -116,12 +117,13 @@ body{
     /* visibility: hidden; */
 }
 .main-box div img{
-    height: 300px;
-    width: 330px;
+    max-height: 300px;
+    max-width: 330px;
 }
 .bandDes {
     padding: 15px;
     color: silver;
+    flex-wrap: wrap;
 }
 .playButton{
     display: flex;
@@ -155,6 +157,7 @@ song in the playlist */
     display: flex;
     width: 100%;
     height: 80px;
+    position: relative;
     flex-direction: row;
     justify-content: space-between;
     background-color: var(--black);
@@ -213,7 +216,7 @@ song in the playlist */
     overflow-x: hidden;
     /* background-color: #35343471; */
     flex:5;
-    height: 90vh;
+    height: 75vh;
     padding: 12px;
     color: cornsilk;
 }
@@ -276,7 +279,72 @@ song in the playlist */
     margin-right: 15px;
 }
 
-
+/* Player */
+.player-nav {
+    background-color: #161616;
+    /* background-image: url("assets/footer.jpg"); */
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    position: fixed;
+    bottom: 0;
+    color:rgb(206, 7, 7);
+}
+.song-info {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 15px;
+}
+.song-pic {
+    border-style: outset;
+    border-color:var(--red);
+    border-width: 2px;
+}
+.like {
+    font-size: 18px;
+    padding-top: 7px;
+    margin-left: 20px;
+}
+.player {
+    justify-content: center;
+    margin: 2%;
+    color:var(--red);
+}
+.more {
+    display: flex;
+    justify-content: space-between;
+    margin: 2%;
+    padding: 10px;
+}
+.more-option {
+    font-size: 20px;
+    margin-top: 10px;
+    padding-left: 15px;
+}
+.slider {
+    height: 3px;   
+    outline: none;
+    margin-top: 18px;
+    margin-left: 5px;
+    width: 50%;
+    filter: saturate(0%);
+}
+.side-song-name{
+    color: cornsilk;
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+.side-artist-name {
+    color: grey;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 0;
+}
 
 
 /* Hover */
@@ -326,4 +394,42 @@ song in the playlist */
 .playButton button:hover{
     cursor: pointer;
     transform: scale(1.05);
+}
+
+
+
+
+/* Media Query */
+@media only screen and (max-width: 1200px) {
+  .side {
+      display: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+    .fav p{
+        display: none;
+    }
+    .fav i{
+        padding-bottom:20px;
+    }
+    .player {
+        display: none;
+    }
+    .bandDes p{
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .main-box img {
+        width: 40vw;
+        height: 40vw;
+    }
+    .bandDes h6 {
+        visibility: hidden;
+    }
+    .firstPart img {
+        visibility: collapse;
+    }
 }
