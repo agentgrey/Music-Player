@@ -310,7 +310,7 @@ song in the playlist */
 .player {
     justify-content: center;
     margin: 2%;
-    color:var(--red);
+    opacity: 0.7;
 }
 .more {
     display: flex;
@@ -394,6 +394,9 @@ song in the playlist */
 .playButton button:hover{
     cursor: pointer;
     transform: scale(1.05);
+}
+.player:hover {
+    opacity: 0.9;
 }
 
 
