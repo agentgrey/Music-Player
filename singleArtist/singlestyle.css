@@ -5,7 +5,11 @@
     --shadow: #f02424;
 }
 body{
+<<<<<<< HEAD
      background-image: url("..D:/assets/main.jpg");
+=======
+     background-image: url("../assets/main.jpg");
+>>>>>>> 169005e05a3778a930a362f1f3245f6b67537e9d
      /* background-image: url("assets/navbar.jpg"); */
     background-repeat: no-repeat;
     background-size:cover;
